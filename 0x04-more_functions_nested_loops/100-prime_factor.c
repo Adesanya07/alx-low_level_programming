@@ -1,22 +1,25 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
- * print_number - Prints an integer.
- * @n: integer to be printed.
- */
+* main - entry block
+* @void: no argument
+* Return: 0
+*/
 
-void print_number(int n)
+int main(void)
 {
-	unsigned int num = n;
+	long i, number = 612852475143;
 
-	if (n < 0)
+	for (i  = 2; i <= number; i++)
 	{
-		_putchar('-');
-		num = -num;
+		if (number % i == 0)
+		{
+			number = number / i;
+			i--;
+		}
 	}
 
-	if ((num / 10) > 0)
-		print_number(num / 10);
+	printf("%lu\n", i);
 
-	_putchar((num % 10) + '0');
+	return (0);
 }
