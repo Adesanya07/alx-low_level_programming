@@ -1,46 +1,22 @@
-#include "holberton.h"
+#include "main.h"
+
 /**
- * print_number - print an int numbers.
- * @n: number tested
- * Return: Always 0.
+ * print_number - Prints an integer.
+ * @n: integer to be printed.
  */
+
 void print_number(int n)
 {
-	int i, j, digit, digits, power;
-	unsigned int temp, numchar, number;
+	unsigned int num = n;
 
-	digit = 0;
 	if (n < 0)
 	{
 		_putchar('-');
-		temp = -n;
-	}
-	else
-	{
-		temp = n;
+		num = -num;
 	}
 
-	number = temp;
+	if ((num / 10) > 0)
+		print_number(num / 10);
 
-	while (number >= 10)
-	{
-		number = number / 10;
-		digit++;
-	}
-	digits = digit + 1;
-	power = 1;
-	i = 1;
-
-	while (i < digits)
-	{
-		power = power * 10;
-		i++;
-	}
-	j = power;
-	while (j >= 1)
-	{
-		numchar = (temp / j) % 10;
-		_putchar(numchar + '0');
-		j = j / 10;
-	}
+	_putchar((num % 10) + '0');
 }
