@@ -1,39 +1,28 @@
-#include "main.h"
+#include "holberton.h"
 
 /**
-  *rev_string- prints in reverse
-  *_strlen- count
- *@s: checked
- *Return: nothing
+ * rev_string - rev string
+ * @s: string
  */
-int _strlen(char *s)
-{
-
-	int i, len;
-
-	len = 0;
-
-	for (i = 0; s[i] != '\0'; ++i)
-	{
-		len++;
-	}
-	return (len);
-}
 
 void rev_string(char *s)
 {
-	int strsize = _strlen(s);
-	int i;
+	char *t = s;
+	char n[1000];
+	short c = 0;
 
-	char c;
-
-	i = 0;
-
-	while (i < (strsize / 2))
+	while (*s != '\0')
 	{
-		c = *(s + i);
-		*(s + i) = *(s + strsize - 1 - i);
-		*(s + strsize - 1 - i) = c;
-		i++;
+		n[c] = *s;
+		s++;
+		c++;
+	}
+	c = 0;
+
+	while (s > t)
+	{
+		s--;
+		*s = n[c];
+		c++;
 	}
 }
