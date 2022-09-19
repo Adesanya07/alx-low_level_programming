@@ -1,10 +1,15 @@
 #include "main.h"
 
 /**
- *  0-reset_to_98.c - a function to update a reference of a pointer
- * @n : pointer to n to be updated
+ *reset_to_98- it reset to 98
+ *@n: checked
+ *Return: nothing
  */
-void void reset_to_98(int *n);
+void reset_to_98(int *n)
 {
-	*n = 98;
+	int *ptr;
+
+	ptr = n;
+
+	*ptr = 98;
 }
