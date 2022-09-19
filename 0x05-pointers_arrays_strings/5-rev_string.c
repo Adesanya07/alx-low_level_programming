@@ -8,7 +8,6 @@
  */
 int _strlen(char *s)
 {
-
 	int i, len;
 
 	len = 0;
@@ -24,11 +23,8 @@ void rev_string(char *s)
 {
 	int strsize = _strlen(s);
 	int i;
-
 	char c;
-
 	i = 0;
-
 	while (i < (strsize / 2))
 	{
 		c = *(s + i);
