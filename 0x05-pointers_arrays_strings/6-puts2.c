@@ -1,24 +1,18 @@
-#include "main.h"
-
+#include "holberton.h"
 /**
- * puts2 - prints one char out of 2
- * @str: type
- *
+ *puts2- print skip one number
+ *@str:checked
+ *Return:nothing
  */
-
 void puts2(char *str)
 {
-	int i, j = 0;
 
-	while (str[i] != '\0')
-	{
-		i++;
-	}
+	int i = 0;
 
-	while (j < i)
+	while (*(str + i) != '\0')
 	{
-		_putchar(str[j]);
-		j = j + 2;
+		_putchar(str[i]);
+		i += 2;
 	}
 	_putchar('\n');
 }
