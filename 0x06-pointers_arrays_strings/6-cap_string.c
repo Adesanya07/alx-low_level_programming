@@ -1,4 +1,4 @@
-#include "holberton.h"
+#include "main.h"
 /**
  *cap_string- converts small letters to cap
  *@s: checked
